@@ -1,0 +1,100 @@
+\documentclass[letterpaper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel} %Idioma
+\input{packetes}
+
+
+\newcommand{\atom}{\textit{atom}(\phi)}
+\newcommand{\atomg}{\textit{con}(\gamma)}
+\newcommand{\con}{\textit{con}(\phi)}
+\newcommand{\icd}{\textit{icd}(\phi)}
+
+%------------------ S T A R -------------------------------------------------------------------|
+\begin{document} 
+%------------------ TITULO
+                \titulo
+%------------------ TITULO
+\Large{
+
+\section*{Definiciones}
+\begin{itemize}
+    \item[$\bullet$] \textbf{Alfabeto:} Conjunto finito de caracteres o símbolos denotado por $\Sigma$
+    \begin{itemize}
+        \item $\Sigma_1 = \{ 0,1 \}$
+        \item $\Sigma_2 = \{ a, b, c, ..., z \}$
+    \end{itemize}
+    
+    \item[$\bullet$] \textbf{Cadenas:} secuencia finita de los caracteres definidos en $\Sigma$ 
+    \begin{itemize}
+        \item $\Sigma_1 = 10101 $
+        \item $\Sigma_2 = hola $
+    \end{itemize}
+    
+    \item[$\bullet$] \textbf{Longitud de cadena:} Es el número de elementos que hay en la cadena. se denote con: $|x|$
+    \begin{itemize}
+        \item $ |10101| = 5 $
+        \item $ |hola| = 4 $
+    \end{itemize}
+    
+    \item[$\bullet$] \textbf{Cadena vacía:} Es es tiene longitud $0$, la denotamos con $\varepsilon$, con $|\varepsilon| = 0$ 
+\end{itemize}
+
+\section*{Operaciones en cadenas}    
+
+\begin{itemize}
+
+    \item \textbf{Concatenación}
+    \begin{itemize}
+        \item Se tiene las cadenas $x = 101$ y $y = 111$, la cadena $xy = 101111$ 
+    \end{itemize}
+    
+    \item \textbf{Concatenación de la cadena vacía}
+    \begin{itemize}
+        \item Sea la cadena $x = 101$ y la cadena vacía $\varepsilon$, la cadena $x\varepsilon = 101$
+    \end{itemize}
+    
+    
+    \item\textbf{Elevar una cadena:}  Para la cadena $a^{n}$ será la cadena de $a's$ de longitud $n$, $a^{5} = aaaaa $. Y podemos definir:
+    \begin{equation*}
+        a^{0} =  \varepsilon
+    \end{equation*}
+    \begin{equation*}
+        a^{n+1} = a^{n}a
+    \end{equation*}
+    
+\end{itemize}
+
+    
+\subsection*{Operaciones en conjuntos}        
+\begin{itemize}
+    \item \textbf{Cerradura de Klenne:}  Se denota para el conjunto del alfabeto como $A^{*}$ y representa la unión de todas las potencias de $A$. Es decir, una concatenación de todas las potencias $(A^{1} \cup A^{2} \cup A^{3}...)$
+    
+    \item \textbf{Cerradura de Klenne para el conjunto vacío}
+    Da como resultado al conjunto con la cadena vaciía 
+    \begin{equation*}
+        (\emptyset)^{*}  = \{ \varepsilon \}
+    \end{equation*}
+    
+\end{itemize}
+
+\section*{Lenguajes}
+\subsection*{Que son los lenguajes}
+
+Al conjunto de cadenas tomadas de un alfabeto $\Sigma^{*}$ se le llama lenguaje. Es decir, podemos tener un alfabeto tal que $\Sigma = \{ a, b, c ...z \}$ (las letras del abecedario), y sabemos que el lenguaje del español esta contenido aquí pero también el lenguaje del inglés y ambos derivan de $\Sigma^{*}$. De modo que si $\Sigma$ es un alfabeto y $L$ es un lenguaje: $L \subseteq \Sigma^{*}$, entonces $L$ es un lenguaje de $\Sigma$
+
+\subsection*{Puntos importantes}
+
+\begin{itemize}
+
+    \item[$\bullet$] $\Sigma^{*}$ Es el lenguaje para cualquier alfabeto $\Sigma$
+    
+    \item[$\bullet$] El lenguaje vacío, es el lenguaje de cualquier alfabeto
+    
+    \item[$\bullet$] El lenguaje que consta sólo de la cadena vacía $(\{  \varepsilon \})$, tambien es un lenguaje de cualquier alfabeto. 
+    
+    \item[$\bullet$] $\emptyset \neq \{\varepsilon\}$. A la izquierda no contiene ninguna cadena. A la derecha contiene sólo una cadena.
+    
+\end{itemize}
+
+} \end{document}
+%----------------------E  N  D-----------------------------------------------------------------|
